@@ -10,13 +10,25 @@ namespace Inheritance
     {
         public Reptile()
         {
-
+            BreathesAir = true;
+            Legs = 4;
+            HasTail = true;
+            CanSwim = false;
         }
 
-        public bool ColdBlooded { get; set; }
-        public bool Vertebrates { get; set; }
-        public bool ShedSkin { get; set; }
+        public bool IsColdBlooded { get; set; } = true;
+        public string Movement { get; set; }
         public bool HasScales { get; set; }
+        public bool HasForkedTongue { get; set; }
+
+        public void PrintDetails()
+        {
+            Console.WriteLine($"{GetType().Name}");
+            Console.WriteLine($"Name: {Name}");
+            Console.WriteLine($"Is Cold-Blooded: {IsColdBlooded}");
+            Console.WriteLine($"Mobility: {Movement}");
+        }
+
 
     }
 }

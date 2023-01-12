@@ -10,13 +10,25 @@ namespace Inheritance
     {
         public Bird()
         {
-
+            Legs = 2;
+            BreathesAir = true;
+            HasTail = true;
+            CanSwim = false;
         }
 
-        public bool Wings { get; set; }
-        public bool Fly { get; set; }
-        public bool Claws { get; set; }
-        public bool HollowBones { get; set; }
+        public bool CanFly { get; set; } = true;
+        public bool HasFeathers { get; set; } = true;
+        public bool CanSing { get; set; } = true;
+        public bool BuildsNest { get; set; }
+
+        public void PrintDetails()
+        {
+            Console.WriteLine($"{GetType().Name}");
+            Console.WriteLine($"Name: {Name}");
+            Console.WriteLine($"Can fly: {CanFly}");
+            Console.WriteLine($"Specialty: {CanSing}");
+        }
+
 
     }
 }

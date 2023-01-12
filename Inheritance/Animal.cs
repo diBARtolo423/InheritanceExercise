@@ -13,10 +13,12 @@ namespace Inheritance
 
         }
 
-        public bool Move { get; set; }
-        public bool Breathe { get; set; }
-        public bool Reproduce { get; set; }
-        public bool Eat { get; set; }
+        public string Name { get; set; }
+        public int Legs { get; set; }
+        public bool HasTail { get; set; }
+        public bool BreathesAir { get; set; }
+        public bool CanSwim { get; set; }
+
 
     }
 }
